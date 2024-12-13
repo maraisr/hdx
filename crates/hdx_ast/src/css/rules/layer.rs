@@ -22,7 +22,7 @@ impl<'a> Parse<'a> for LayerRule<'a> {
 		let (at_keyword, names, block) = Self::parse_at_rule(p, Some(atom!("layer")))?;
 		if let Some(ref names) = names {
 			if matches!(block, OptionalLayerBlock::Block(_)) && names.0.len() > 1 {
-				let c: Cursor = names.0[0].0.0.into();
+				let c: Cursor = names.0[0].0 .0.into();
 				Err(diagnostics::DisallowedLayerBlockWithMultipleNames(c.into()))?
 			}
 		}

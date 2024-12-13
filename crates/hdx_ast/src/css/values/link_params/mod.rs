@@ -1,8 +1,6 @@
 mod impls;
 pub mod types;
 
-use impls::*;
-
 /*
  * https://drafts.csswg.org/css-link-params-1/
  * CSS Linked Parameters

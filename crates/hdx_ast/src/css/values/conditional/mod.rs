@@ -1,8 +1,6 @@
 mod impls;
 pub mod types;
 
-use impls::*;
-
 /*
  * https://drafts.csswg.org/css-conditional-5/
  * CSS Conditional Rules Module Level 5

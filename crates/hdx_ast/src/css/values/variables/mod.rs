@@ -1,8 +1,6 @@
 mod impls;
 pub mod types;
 
-use impls::*;
-
 /*
  * https://drafts.csswg.org/css-variables-2/
  * CSS Custom Properties for Cascading Variables Module Level 2

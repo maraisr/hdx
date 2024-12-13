@@ -6,7 +6,7 @@ pub trait ParseEscape {
 	fn parse_escape_sequence(&mut self) -> (char, u8);
 }
 
-impl<'a> ParseEscape for Chars<'a> {
+impl ParseEscape for Chars<'_> {
 	fn parse_escape_sequence(&mut self) -> (char, u8) {
 		if let Some(c) = self.next() {
 			if !c.is_ascii_hexdigit() {

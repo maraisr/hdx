@@ -1,4 +1,4 @@
-use std::{ascii::AsciiExt, char::REPLACEMENT_CHARACTER};
+use std::char::REPLACEMENT_CHARACTER;
 
 use bumpalo::{collections::String, Bump};
 use hdx_atom::{Atom, Atomizable};
@@ -86,7 +86,7 @@ impl Cursor {
 				return false;
 			}
 			if self.token().is_lower_case() {
-				debug_assert!(&source[start..end].to_ascii_lowercase() == &source[start..end]);
+				debug_assert!(source[start..end].to_ascii_lowercase() == source[start..end]);
 				return &source[start..end] == other;
 			}
 			return source[start..end].eq_ignore_ascii_case(other);

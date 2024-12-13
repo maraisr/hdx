@@ -75,6 +75,7 @@ impl<'a> Parser<'a> {
 	}
 
 	#[inline]
+	#[must_use]
 	fn enabled(&self, other: Features) -> bool {
 		self.features.contains(other)
 	}

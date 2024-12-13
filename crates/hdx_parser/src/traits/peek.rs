@@ -6,6 +6,6 @@ pub trait Peek<'a>: Sized {
 
 impl<'a, T: Is<'a>> Peek<'a> for T {
 	fn peek(p: &Parser<'a>) -> bool {
-		T::is(p, p.peek_next().into())
+		T::is(p, p.peek_next())
 	}
 }

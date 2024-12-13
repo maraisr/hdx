@@ -67,7 +67,7 @@ pub fn minify(source_text: String) -> Result<String, serde_wasm_bindgen::Error> 
 		return Err(serde_wasm_bindgen::Error::new("Parse error"));
 	}
 	let mut output_string = String::new();
-	if let Err(_) = result.write(&allocator, &mut output_string) {
+	if result.write(&allocator, &mut output_string).is_err() {
 		return Err(serde_wasm_bindgen::Error::new("Write error"));
 	}
 	Ok(output_string)

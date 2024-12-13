@@ -3,8 +3,6 @@ mod named;
 mod syntax;
 mod system;
 
-use std::str::Chars;
-
 use hdx_atom::atom;
 use hdx_parser::{diagnostics, todo, Is, Parse, Parser, Peek, Result as ParserResult, ToCursors, T};
 

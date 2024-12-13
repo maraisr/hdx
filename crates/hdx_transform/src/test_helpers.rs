@@ -50,6 +50,3 @@ macro_rules! assert_transform {
 		}
 	}
 }
-
-#[cfg(test)]
-pub(crate) use assert_transform;

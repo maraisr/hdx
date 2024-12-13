@@ -109,7 +109,7 @@ impl<'a> ToCursors<'a> for PageSelector<'a> {
 	}
 }
 
-impl<'a> ToSpecificity for PageSelector<'a> {
+impl ToSpecificity for PageSelector<'_> {
 	fn specificity(&self) -> Specificity {
 		let specificity = self.pseudos.iter().map(ToSpecificity::specificity).sum();
 		if self.page_type.is_some() {
@@ -190,7 +190,7 @@ pub struct PageBlock<'a> {
 	pub close: Option<T!['}']>,
 }
 
-impl<'a> PageBlock<'a> {
+impl PageBlock<'_> {
 	pub fn is_empty(&self) -> bool {
 		self.properties.is_empty() && self.rules.is_empty()
 	}

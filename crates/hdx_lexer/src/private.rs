@@ -58,7 +58,7 @@ trait CharsConsumer {
 	fn is_number_start(&mut self) -> bool;
 }
 
-impl<'a> CharsConsumer for Chars<'a> {
+impl CharsConsumer for Chars<'_> {
 	#[inline]
 	fn is_last(&self) -> bool {
 		self.clone().next().is_none()
@@ -1000,7 +1000,7 @@ impl<'a> CharsConsumer for Chars<'a> {
 	}
 }
 
-impl<'a> Lexer<'a> {
+impl Lexer<'_> {
 	#[must_use]
 	pub(crate) fn read_next_token(&mut self, offset: u32) -> Token {
 		if self.source.len() as u32 == offset {

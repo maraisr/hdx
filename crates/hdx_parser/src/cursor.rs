@@ -37,7 +37,7 @@ impl From<ParserCheckpoint> for Span {
 	}
 }
 
-impl<'a> Parser<'a> {
+impl Parser<'_> {
 	#[inline(always)]
 	pub fn offset(&self) -> SourceOffset {
 		self.lexer.offset()
